@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./src/server/app.js",
-    "dev": "nodemon ./src/server/app.js"
+    "dev": "nodemon ./src/server/app.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "author": "Twilio",
   "license": "ISC",
@@ -20,7 +22,8 @@
     "express": "^4.14.0",
     "lodash": "^4.15.0",
     "twilio": "^2.9.1",
-    "underscore": "^1.8.3"
+    "underscore": "^1.8.3",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "del": "^2.2.2",
@@ -34,5 +37,6 @@
     "gulp-uglify": "^2.0.0",
     "gulp-useref": "^3.1.0",
     "nodemon": "^1.10.0"
-  }
+  },
+  "snyk": true
 }
